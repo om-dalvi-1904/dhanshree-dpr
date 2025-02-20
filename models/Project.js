@@ -2,6 +2,10 @@ let mongoose = require('mongoose');
 
 let projectSchema = new mongoose.Schema(
     {
+        date: {
+            type: String,
+            required: true
+        },
         projectName: {
             type: String,
             required: true
@@ -14,16 +18,45 @@ let projectSchema = new mongoose.Schema(
             type: Number,
             required: true
         },
-        projectCost: {
+        unitCost: {
             type: Number,
             required: true
         },
-        profit: {
-            type: Number,
-            required: true
+        supervisionCost: {
+            type: Number
         },
-        date: {
-            type: Date,
+        labourCost:  {
+            type: Number
+        },
+        materialCost:  {
+            type: Number
+        },
+        transportCost:  {
+            type: Number
+        },
+        accessoriesCost:  {
+            type: Number
+        },
+        hoiseCost:  {
+            type: Number
+        },
+        electricityBill:  {
+            type: Number
+        },
+        waterBill:  {
+            type: Number
+        },
+        rent:  {
+            type: Number
+        },
+        miscExpense:  {
+            type: Number
+        },
+        total: {
+            type: Number
+        },
+        remarks: {
+            type: String
         }
     },
     {
