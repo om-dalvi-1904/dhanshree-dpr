@@ -48,6 +48,18 @@ let projectController = {
                 "Project Name": item.projectName,
                 "Activity": item.workActivity,
                 "Acticity Area": item.workArea,
+                "Work Area": item.workArea,
+                "Unit Cost": item.unitCost,
+                "Supervision Cost": item.supervisionCost,
+                "Labour Cost": item.labourCost,
+                "Material Cost": item.materialCost,
+                "Transport Cost": item.transportCost,
+                "Accessories Cost": item.accessoriesCost,
+                "Hoise/Lift Cost": item.hoiseCost,
+                "Electricity Bill": item.electricityBill,
+                "Water Bill": item.waterBill,
+                "Rent": item.rent,
+                "Misc Expense": item.miscExpense,
                 "Total Cost": item.total,
             }))
             res.status(200).json(result);
