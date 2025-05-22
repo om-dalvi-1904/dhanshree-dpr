@@ -2,6 +2,9 @@ let express = require('express');
 let mongoose = require('mongoose');
 let projectRouter = require('./routes/projectRoute');
 let cors = require('cors');
+let dotenv = require('dotenv');
+dotenv.config();
+
 
 let app = express();
 let corsOptions = {
@@ -10,7 +13,7 @@ let corsOptions = {
 
 app.use(cors(corsOptions));
 
-mongoose.connect("mongodb+srv://omdalvi1904:MjppXhuCEA8bEOGx@firstdb.ldmseda.mongodb.net/dhanshree-group")
+mongoose.connect(process.env.MONGO_URL)
 .then(()=>{
     console.log("DB connected successfully.");
 })
